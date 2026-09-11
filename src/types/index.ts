@@ -1,23 +1,11 @@
-export type Category = 
-  | 'All' 
-  | 'Frontend' 
-  | 'Backend' 
-  | 'Database' 
-  | 'Language' 
-  | 'Styling' 
-  | 'DevOps' 
-  | 'Tools';
-
-export type Difficulty = 'Beginner-Friendly' | 'Intermediate' | 'Advanced';
-
 export interface Technology {
   id: string;
   name: string;
-  category: Category;
+  category: string;
   description: string;
   icon: string;
   rating: number;
-  difficulty: Difficulty;
+  difficulty: string;
   badge: string;
 }
 

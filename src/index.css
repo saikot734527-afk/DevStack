@@ -2,58 +2,17 @@
 @plugin "daisyui";
 
 :root {
-  /* Single shared brand gradient: orange -> pink -> violet */
-  --brand-gradient-from: #f97316;
-  --brand-gradient-via: #ec4899;
-  --brand-gradient-to: #8b5cf6;
-  --brand-gradient: linear-gradient(135deg, var(--brand-gradient-from), var(--brand-gradient-via), var(--brand-gradient-to));
+  --brand-gradient: linear-gradient(135deg, #f97316, #ec4899, #9333ea);
 }
 
-.bg-brand-gradient {
-  background: var(--brand-gradient);
-}
-
-.bg-brand-gradient-hover {
-  background: linear-gradient(135deg, #ea580c, #db2777, #7c3aed);
-}
-
-.text-brand-gradient {
-  background: var(--brand-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.border-brand-glow {
-  box-shadow: 0 0 15px rgba(236, 72, 153, 0.25);
-}
-
-/* Base App Dark Theme Styling */
 body {
-  background-color: #0b0f19;
-  color: #f3f4f6;
+  background-color: #ffffff;
+  color: #0f172a;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
-}
-
-/* Glassmorphism Card Style */
-.glass-card {
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glass-card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(236, 72, 153, 0.3);
-  box-shadow: 0 12px 30px -10px rgba(236, 72, 153, 0.15);
 }
