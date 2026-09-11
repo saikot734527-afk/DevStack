@@ -1,5 +1,11 @@
 import { X, Layers3 } from 'lucide-react';
-import type { StackSidebarProps } from '../types';
+import type { Technology } from '../types/type.tsx';
+
+interface StackSidebarProps {
+  stack: Technology[];
+  onRemoveFromStack: (id: string) => void;
+  onClearStack: () => void;
+}
 
 export const StackSidebar = ({
   stack,

@@ -1,5 +1,11 @@
 import { Star, Check } from 'lucide-react';
-import type { TechnologyCardProps } from '../types';
+import type { Technology } from '../types/type.tsx';
+
+interface TechnologyCardProps {
+  technology: Technology;
+  isAdded: boolean;
+  onAddToStack: (tech: Technology) => void;
+}
 
 export const TechCard = ({
   technology,

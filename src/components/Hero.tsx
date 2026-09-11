@@ -15,7 +15,7 @@ export const Hero = ({ onExploreClick, onLearnMoreClick }: HeroProps) => {
           <div className="lg:col-span-7 space-y-6 text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
               Build Your Ideal <br />
-              <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#2ebf91] to-[#8360c3] bg-clip-text text-transparent">
                 Development Stack
               </span>
             </h1>
@@ -27,7 +27,7 @@ export const Hero = ({ onExploreClick, onLearnMoreClick }: HeroProps) => {
             <div className="flex flex-row items-center gap-4 pt-2">
               <button
                 onClick={onExploreClick}
-                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 hover:opacity-95 text-white font-semibold text-sm shadow-md shadow-pink-500/20 transition-all cursor-pointer"
+                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#2ebf91] to-[#8360c3] hover:opacity-95 text-white font-semibold text-sm shadow-md shadow-[#8360c3]/20 transition-all cursor-pointer"
               >
                 Explore Technologies
               </button>

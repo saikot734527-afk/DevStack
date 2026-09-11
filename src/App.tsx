@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import type { Technology } from './types';
+import type { Technology } from './types/type.tsx';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TechGrid } from './components/TechGrid';

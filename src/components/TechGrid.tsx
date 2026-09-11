@@ -1,5 +1,5 @@
 import { Loader2 } from 'lucide-react';
-import type { Technology } from '../types';
+import type { Technology } from '../types/type.tsx';
 import { TechCard } from './TechCard';
 
 interface TechGridProps {
@@ -20,7 +20,7 @@ export const TechGrid = ({
       {/* Header Title Section */}
       <div className="space-y-2">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Explore the <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">Technologies</span>
+          Explore the <span className="bg-gradient-to-r from-[#2ebf91] to-[#8360c3] bg-clip-text text-transparent">Technologies</span>
         </h2>
         <p className="text-slate-500 text-sm sm:text-base">
           Pick one technology per category to build your ideal stack.
@@ -30,7 +30,7 @@ export const TechGrid = ({
       {/* Loading State Spinner */}
       {isLoading ? (
         <div className="py-20 flex flex-col items-center justify-center space-y-4 text-slate-400">
-          <Loader2 className="w-10 h-10 animate-spin text-pink-500" />
+          <Loader2 className="w-10 h-10 animate-spin text-[#8360c3]" />
           <p className="text-sm font-medium text-slate-500">Loading technologies dataset...</p>
         </div>
       ) : (
