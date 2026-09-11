@@ -1,4 +1,3 @@
-import { useState, useMemo } from 'react';
 import { Loader2 } from 'lucide-react';
 import type { Technology } from '../types';
 import { TechCard } from './TechCard';
@@ -16,15 +15,6 @@ export const TechGrid = ({
   stackIds,
   onAddToStack,
 }: TechGridProps) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-  const categories = ['All', 'Frontend', 'Backend', 'Database', 'Language', 'Styling', 'DevOps'];
-
-  const filteredTechnologies = useMemo(() => {
-    if (selectedCategory === 'All') return technologies;
-    return technologies.filter((tech) => tech.category === selectedCategory);
-  }, [technologies, selectedCategory]);
-
   return (
     <div className="space-y-8">
       {/* Header Title Section */}
@@ -35,23 +25,6 @@ export const TechGrid = ({
         <p className="text-slate-500 text-sm sm:text-base">
           Pick one technology per category to build your ideal stack.
         </p>
-
-        {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pt-4 pb-2 scrollbar-none">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
-                selectedCategory === cat
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Loading State Spinner */}
@@ -63,7 +36,7 @@ export const TechGrid = ({
       ) : (
         /* Technology Cards Grid: 3-column layout on desktop */
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {filteredTechnologies.map((tech) => (
+          {technologies.map((tech) => (
             <TechCard
               key={tech.id}
               technology={tech}

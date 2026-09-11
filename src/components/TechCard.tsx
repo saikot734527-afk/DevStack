@@ -6,35 +6,14 @@ export const TechCard = ({
   isAdded,
   onAddToStack,
 }: TechnologyCardProps) => {
-  const { name, category, description, icon, rating, difficulty, badge } = technology;
-
-  // Badge pill colors according to screenshot
-  const getBadgeStyle = (badgeName: string) => {
-    switch (badgeName) {
-      case 'Popular':
-      case 'Essential':
-      case 'Containers':
-      case 'Top SQL':
-      case 'Full-Stack':
-        return 'bg-blue-50 text-blue-600 border-blue-100';
-      case 'Versatile':
-      case 'Modern':
-      case 'Robust':
-        return 'bg-emerald-50 text-emerald-600 border-emerald-100';
-      case 'Fast':
-      case 'Cache':
-        return 'bg-orange-50 text-orange-600 border-orange-100';
-      default:
-        return 'bg-purple-50 text-purple-600 border-purple-100';
-    }
-  };
+  const { name, category, description, icon, rating, difficulty } = technology;
 
   return (
     <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between space-y-4">
       
-      {/* Top Header: Icon on Left, Badge on Right */}
+      {/* Top Header: Icon */}
       <div>
-        <div className="flex items-center justify-between mb-4">
+        <div className="mb-4">
           <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 p-2 flex items-center justify-center">
             <img
               src={icon}
@@ -45,10 +24,6 @@ export const TechCard = ({
               }}
             />
           </div>
-
-          <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeStyle(badge)}`}>
-            {badge}
-          </span>
         </div>
 
         {/* Name */}
