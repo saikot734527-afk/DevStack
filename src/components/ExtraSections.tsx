@@ -4,7 +4,6 @@ export const ExtraSections = () => {
   return (
     <div className="space-y-24 py-12">
       
-      {/* Projects Section */}
       <section id="projects" className="scroll-mt-24 space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-rose-400">
@@ -65,7 +64,6 @@ export const ExtraSections = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="scroll-mt-24 bg-slate-900/70 backdrop-blur-md border border-slate-800 rounded-3xl p-8 lg:p-12 space-y-6 relative overflow-hidden">
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-rose-400">
@@ -100,7 +98,6 @@ export const ExtraSections = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="scroll-mt-24 space-y-8">
         <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto space-y-6 text-center">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-rose-400">

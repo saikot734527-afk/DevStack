@@ -6,7 +6,6 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           
-          {/* Brand Block */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center">
               <img src={logoText} alt="DevStack Logo" className="h-8 w-auto object-contain" />
@@ -16,7 +15,6 @@ export const Footer = () => {
               Curated tools, technologies, and resources for developers building modern software.
             </p>
 
-            {/* Social Links */}
             <div className="flex items-center space-x-4 pt-2">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors font-medium">
                 GitHub
@@ -30,7 +28,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Link Group 1: Product */}
           <div className="space-y-3">
             <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wider">PRODUCT</h4>
             <ul className="space-y-2 text-slate-500">
@@ -40,7 +37,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Link Group 2: Company */}
           <div className="space-y-3">
             <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wider">COMPANY</h4>
             <ul className="space-y-2 text-slate-500">
@@ -50,7 +46,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Link Group 3: Legal */}
           <div className="space-y-3">
             <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wider">LEGAL</h4>
             <ul className="space-y-2 text-slate-500">
@@ -61,7 +56,6 @@ export const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-8 mt-12 border-t border-slate-100 flex flex-row items-center justify-between text-slate-400">
           <p>© {new Date().getFullYear()} DevStack. All rights reserved.</p>
           <div className="flex items-center space-x-6">

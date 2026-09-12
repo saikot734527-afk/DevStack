@@ -14,7 +14,6 @@ function App() {
   const [stack, setStack] = useState<Technology[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // Fetch JSON technology data on mount
   useEffect(() => {
     const fetchTechnologies = async () => {
       try {
@@ -38,10 +37,8 @@ function App() {
     fetchTechnologies();
   }, []);
 
-  // Quick Set for fast lookup of added technology IDs
   const stackIds = new Set(stack.map((item) => item.id));
 
-  // Add technology to stack handler
   const handleAddToStack = (tech: Technology) => {
     if (stackIds.has(tech.id)) {
       toast.warn(`${tech.name} is already in your stack!`, {
@@ -58,7 +55,6 @@ function App() {
     });
   };
 
-  // Remove single item from stack handler
   const handleRemoveFromStack = (id: string) => {
     const itemToRemove = stack.find((item) => item.id === id);
     setStack((prev) => prev.filter((item) => item.id !== id));
@@ -70,7 +66,6 @@ function App() {
     }
   };
 
-  // Clear all items from stack handler
   const handleClearStack = () => {
     if (stack.length === 0) return;
     setStack([]);
@@ -80,7 +75,6 @@ function App() {
     });
   };
 
-  // Smooth scroll handler
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -90,23 +84,18 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans flex flex-col">
-      {/* Sticky Top Navbar */}
       <Navbar onScrollToSection={handleScrollToSection} />
 
-      {/* Hero Banner Section */}
       <Hero
         onExploreClick={() => handleScrollToSection('technologies')}
         onLearnMoreClick={() => handleScrollToSection('technologies')}
       />
 
-      {/* Main Content Area */}
       <main className="flex-1 max-w-7xl mx-auto px-6 lg:px-12 py-12 w-full space-y-16">
 
-        {/* Technologies Grid & Your Stack Sidebar Layout */}
         <section id="technologies" className="scroll-mt-24">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-            {/* Left 2 Columns: Technology Directory Cards */}
             <div className="lg:col-span-2">
               <TechGrid
                 technologies={technologies}
@@ -116,7 +105,6 @@ function App() {
               />
             </div>
 
-            {/* Right 1 Column: Your Stack Sidebar Panel */}
             <StackSidebar
               stack={stack}
               onRemoveFromStack={handleRemoveFromStack}
@@ -128,10 +116,8 @@ function App() {
 
       </main>
 
-      {/* Footer Section */}
       <Footer />
 
-      {/* React-Toastify Container for alerts */}
       <ToastContainer autoClose={3000} hideProgressBar={false} closeOnClick />
     </div>
   );

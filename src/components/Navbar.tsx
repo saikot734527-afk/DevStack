@@ -18,12 +18,10 @@ export const Navbar = ({ onScrollToSection }: NavbarProps) => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-12 items-center h-20">
           
-          {/* Left Brand Image */}
           <div className="col-span-3 grid items-center cursor-pointer" onClick={() => onScrollToSection('home')}>
             <img src={logoText} alt="DevStack Logo" className="h-9 w-auto object-contain justify-self-start" />
           </div>
 
-          {/* Center Navigation Links */}
           <nav className="col-span-6 justify-self-center grid grid-flow-col auto-cols-max gap-8 items-center">
             {navLinks.map((link) => (
               <button
@@ -40,7 +38,6 @@ export const Navbar = ({ onScrollToSection }: NavbarProps) => {
             ))}
           </nav>
 
-          {/* Right Section: Sign In & Sign Up Buttons */}
           <div className="col-span-3 justify-self-end grid grid-flow-col auto-cols-max gap-4 items-center">
             <button className="text-slate-600 hover:text-slate-900 text-sm font-medium px-4 py-2 transition-colors cursor-pointer">
               Sign In
