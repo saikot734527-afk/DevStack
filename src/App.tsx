@@ -44,7 +44,7 @@ function App() {
   // Add technology to stack handler
   const handleAddToStack = (tech: Technology) => {
     if (stackIds.has(tech.id)) {
-      toast.warn(`⚠️ ${tech.name} is already in your stack!`, {
+      toast.warn(`${tech.name} is already in your stack!`, {
         position: 'bottom-right',
         theme: 'light',
       });
@@ -52,7 +52,7 @@ function App() {
     }
 
     setStack((prev) => [...prev, tech]);
-    toast.success(`🚀 Added ${tech.name} to your stack!`, {
+    toast.success(`Added ${tech.name} to your stack!`, {
       position: 'bottom-right',
       theme: 'light',
     });
@@ -101,11 +101,11 @@ function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl mx-auto px-6 lg:px-12 py-12 w-full space-y-16">
-        
+
         {/* Technologies Grid & Your Stack Sidebar Layout */}
         <section id="technologies" className="scroll-mt-24">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
+
             {/* Left 2 Columns: Technology Directory Cards */}
             <div className="lg:col-span-2">
               <TechGrid

@@ -31,7 +31,7 @@ export const TechGrid = ({
       {isLoading ? (
         <div className="py-20 flex flex-col items-center justify-center space-y-4 text-slate-400">
           <Loader2 className="w-10 h-10 animate-spin text-[#8360c3]" />
-          <p className="text-sm font-medium text-slate-500">Loading technologies dataset...</p>
+          <p className="text-sm font-medium text-slate-500">Loading ...........</p>
         </div>
       ) : (
         /* Technology Cards Grid: 3-column layout on desktop */
