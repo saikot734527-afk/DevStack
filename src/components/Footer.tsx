@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className="bg-white border-t border-slate-100 text-slate-500 text-xs mt-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          
+
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center">
               <img src={logoText} alt="DevStack Logo" className="h-8 w-auto object-contain" />
@@ -38,7 +38,7 @@ export const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wider">COMPANY</h4>
+            <h4 className="text-slate-900 font-bold text-xs uppercase tracking-wider">Company</h4>
             <ul className="space-y-2 text-slate-500">
               <li><a href="#about" className="hover:text-slate-900 transition-colors">About</a></li>
               <li><a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a></li>
