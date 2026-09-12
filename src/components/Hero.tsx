@@ -10,17 +10,17 @@ export const Hero = ({ onExploreClick, onLearnMoreClick }: HeroProps) => {
     <section id="home" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           <div className="lg:col-span-7 space-y-6 text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
               Build Your Ideal <br />
               <span className="bg-gradient-to-r from-[#2ebf91] to-[#8360c3] bg-clip-text text-transparent">
-                Development Stack
+                Development stack
               </span>
             </h1>
 
             <p className="text-slate-500 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
-              Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your next project.
+              Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your project.
             </p>
 
             <div className="flex flex-row items-center gap-4 pt-2">

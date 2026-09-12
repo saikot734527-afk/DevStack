@@ -17,7 +17,7 @@ export const StackSidebar = ({
   return (
     <aside className="lg:col-span-1 space-y-6">
       <div className="bg-white border border-slate-100 rounded-2xl p-6 sticky top-24 shadow-sm space-y-6">
-        
+
         <div>
           <h2 className="text-xl font-bold text-slate-900 tracking-tight">Your Stack</h2>
           <p className="text-xs text-slate-400 mt-1">
@@ -78,7 +78,7 @@ export const StackSidebar = ({
               onClick={onClearStack}
               className="w-full py-2.5 rounded-xl border border-rose-200 text-rose-500 hover:bg-rose-50 font-medium text-xs transition-colors cursor-pointer"
             >
-              Remove All
+              Remove all
             </button>
           </div>
         )}
